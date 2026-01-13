@@ -23,6 +23,7 @@ class BottomNavBar extends StatelessWidget {
     return Obx(()=> Scaffold(
       body: screens[homeController.currentIndex.value],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: AppColors.whiteColor,
         currentIndex: homeController.currentIndex.value,
           type: BottomNavigationBarType.fixed,
           onTap: homeController.changeTab,

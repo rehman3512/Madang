@@ -10,7 +10,7 @@ class ListInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon),
+      leading: Icon(icon,color: AppColors.greyColor,size: 24,),
       title: TextWidget.h4(text, AppColors.blackColor, context),
       trailing: Icon(Icons.arrow_forward_ios_outlined,color: AppColors.blackColor,size: 16,),
     );

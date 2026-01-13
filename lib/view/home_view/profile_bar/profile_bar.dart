@@ -24,17 +24,29 @@ class ProfileBar extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             // ListTile(
-             //   // leading: CircleAvatar(child: Image.asset(AppAssets.profileImage,
-             //   // fit: BoxFit.cover,),),
-             //   title: TextWidget.h4("Michael Antonio", AppColors.blackColor, context),
-             //   subtitle: TextWidget.h5(" mich@gmail.com", AppColors.blackColor, context),
-             //   trailing: Row(children: [
-             //     Icon(Icons.edit),
-             //     TextWidget.h5("Edit", AppColors.blackColor, context)
-             //   ],),
-             // ),
-              SizedBox( height: 30,),
+             Row(
+               mainAxisSize: MainAxisSize.min,
+               children: [
+               CircleAvatar(backgroundImage: AssetImage(AppAssets.profileImage),radius: 40,),
+               SizedBox(width: 20,),
+               Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   TextWidget.h4("Michael Antonio", AppColors.blackColor, context),
+                   TextWidget.h5("mich@gmail.com", AppColors.blackColor, context),
+                 ],
+               ),
+                 Spacer(),
+                 GestureDetector(
+                   onTap: (){},
+                   child: Row(children: [
+                     Icon(Icons.edit,size: 16,),
+                     SizedBox(width: 4,),
+                     TextWidget.h5("Edit", AppColors.blackColor, context),
+                   ],),
+                 )
+             ],),
+              SizedBox( height: 40,),
               TextWidget.h5("Account", AppColors.blackColor, context),
               SizedBox(height: 20,),
               ListInfo(icon: Icons.credit_card, text: "Payment Method"),

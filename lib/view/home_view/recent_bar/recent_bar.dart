@@ -29,7 +29,7 @@ class RecentBar extends StatelessWidget {
           SizedBox(height: 20,),
           Expanded(child: Obx((){
             return IndexedStack(
-              index: homeController.currentIndex.value,
+              index: homeController.selectIndex.value,
               children: [
                 NewestTab(),
                 OldestTab()

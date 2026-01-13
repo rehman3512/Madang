@@ -1,5 +1,5 @@
 class AppAssets{
-  static String deal1Image = "assets/intersect.png";
+  static String deal1Image = "assets/deal1.png";
   static String deal2Image = "assets/intersect2.png";
   static String deal3Image = "assets/work.png";
   static String deal4Image = "assets/familyTable.png";
@@ -12,4 +12,5 @@ class AppAssets{
   static String simpleImage = "assets/simple.png";
   static String familyImage = "assets/family.png";
   static String profileImage = "assets/profile.png";
+  static String searchLogoImage = "assets/searchLogo.png";
 }
