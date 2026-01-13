@@ -5,6 +5,7 @@ import 'package:madang/controller/home_controller/home_controller.dart';
 import 'package:madang/view/home_view/home_bar/home_bar.dart';
 import 'package:madang/view/home_view/profile_bar/profile_bar.dart';
 import 'package:madang/view/home_view/recent_bar/recent_bar.dart';
+import 'package:madang/view/home_view/research_bar/research_bar.dart';
 
 class BottomNavBar extends StatelessWidget {
   BottomNavBar({super.key});
@@ -12,7 +13,7 @@ class BottomNavBar extends StatelessWidget {
 
   final List <Widget> screens = [
     HomeBar(),
-  SearchBar(),
+    ReSearchBar(),
   RecentBar(),
   ProfileBar(),
   ];

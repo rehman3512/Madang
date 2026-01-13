@@ -5,22 +5,24 @@ import 'package:madang/constants/app_colors/app_colors.dart';
 import 'package:madang/widgets/text_widget/text_widget.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final String text;
-  final String label;
+  final String? label;
   final Color color;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   final bool obscure;
   final bool readOnly;
   final TextInputType? keyboardType;
   final String? Function(String?)? validator;
   const CustomTextFormField({
     super.key,
-    required this.controller,
-    required this.label,
+    this.controller,
+    this.label,
     required this.text,
     required this.color,
     this.suffixIcon,
+    this.prefixIcon,
     this.keyboardType,
     this.obscure = false,
     this.readOnly = false,
@@ -34,7 +36,7 @@ class CustomTextFormField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextWidget.h4(label, color, context),
+          TextWidget.h4(label??"", color, context),
           SizedBox(height: 10,),
           TextFormField(
             controller: controller,
@@ -49,6 +51,7 @@ class CustomTextFormField extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
             decoration: InputDecoration(
+              prefixIcon: prefixIcon,
               suffixIcon: suffixIcon,
               hintText: text,
               hintStyle: GoogleFonts.poppins(
