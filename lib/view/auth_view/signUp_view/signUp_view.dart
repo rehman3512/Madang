@@ -109,8 +109,8 @@ class SignUpView extends StatelessWidget {
                   alignment: Alignment.center,
                   child: GestureDetector(
                     onTap: (){},
-                    child: CustomButton(text: "Sign Up Now", color: AppColors.greyColor,
-                        textColor: AppColors.whiteColor, borderColor: AppColors.greyColor),
+                    child: CustomButton(text: "Sign Up Now", color: AppColors.primaryColor,
+                        textColor: AppColors.whiteColor, borderColor: AppColors.primaryColor),
                   ),
                 ),
                 SizedBox(height: 20,),
